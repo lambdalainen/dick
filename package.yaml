@@ -20,13 +20,21 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/lambdalainen/dick#readme>
 
 dependencies:
+- aeson
 - base >= 4.7 && < 5
+- bytestring
+- filepath
+- http-client
+- http-client-tls
+- http-types
+- pretty
+- uri-encode
 
 library:
   source-dirs: src
 
 executables:
-  dick-exe:
+  dick:
     main:                Main.hs
     source-dirs:         app
     ghc-options:

@@ -31,10 +31,18 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , filepath
+    , http-client
+    , http-client-tls
+    , http-types
+    , pretty
+    , uri-encode
   default-language: Haskell2010
 
-executable dick-exe
+executable dick
   main-is: Main.hs
   other-modules:
       Paths_dick
@@ -42,8 +50,16 @@ executable dick-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
     , dick
+    , filepath
+    , http-client
+    , http-client-tls
+    , http-types
+    , pretty
+    , uri-encode
   default-language: Haskell2010
 
 test-suite dick-test
@@ -55,6 +71,14 @@ test-suite dick-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
     , dick
+    , filepath
+    , http-client
+    , http-client-tls
+    , http-types
+    , pretty
+    , uri-encode
   default-language: Haskell2010
