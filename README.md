@@ -53,3 +53,16 @@ _/kəˈprɪʃəs/_, _/kəˈpriʃəs/_
 ## When rendered:
 
 <img src="https://raw.githubusercontent.com/lambdalainen/dick/master/png/markdown.png" alt="Screenshot" width="600">
+
+## Convert to PDF
+
+There are many ways to convert a Markdown file to PDF. One good way to do this
+on MacOS locally is:
+
+```
+pip install grip
+grip your_markdown.md
+```
+
+`grip` will render the markdown on localhost at some port, so just Print the
+page with Chrome and "Save as PDF".
