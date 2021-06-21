@@ -62,7 +62,7 @@ lookupWord manager outputFile word = do
       case decode body :: Maybe [Word] of
         Nothing -> B.putStrLn $ "Couldn't decode body: " <> body
         Just ws -> mapM_ write_output ws
-    other -> putStrLn $ "Unexpected statusCode: " ++ show other
+    other -> putStrLn $ "Unexpected statusCode: " ++ show other ++ ": " ++ word
   where
   write_output = appendFile outputFile . render . mdWord
 
